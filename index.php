@@ -25,10 +25,10 @@
             </tr>
             <?php
         //inclure la page de connexion
-        include_once "connexion.php"
+        include_once "connexion.php";
         //requete pour afficher la liste des employer
-        $req = mysqli_query($con, "SELECT*FROM Employe");
-        if(mysqli_num_row($req) == 0){
+        $req = mysqli_query($con, "SELECT * FROM employer");
+        if(mysqli_num_rows($req) == 0){
             //s'il n'existe pas d'employe dans la base de donne , alors on affiche ce message :
             echo "Il n'y a pas encors d'employe ajouter !";
         }else {
